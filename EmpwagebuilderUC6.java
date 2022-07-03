@@ -1,21 +1,25 @@
 
-public class EmpwagebuilderUC5 {
+
+public class EmpwagebuilderUC6 {
 	
 	// Constant
         public static final  int IS_FULL_TIME =1;
 		public static final int IS_PART_TIME =2;
 		public static final	int EMP_RATE_PER_HOUR = 20;
-		public static final	int NUMB_WORKING_DAY = 20;	
+		public static final	int NUMB_WORKING_DAY = 20;
+		public static final int MAX_HR_IN_MONTH = 100;
 	public static void main(String [] args) {
 		
 		// Variables
 		int emphrs = 0;
 		int empwage = 0;
 		int totalempwage = 0;
-	
+		int totalworkingdays = 0;
+	    int totalemphrs = 0;
 		// Computation
-	    for (int day = 0; day < NUMB_WORKING_DAY; day++)  {
-	    	 int empcheck = (int) Math.floor(Math.random() * 10) % 3;
+	    while (totalemphrs < MAX_HR_IN_MONTH && totalworkingdays< NUMB_WORKING_DAY ){
+               totalworkingdays++;
+	    	int empcheck = (int) Math.floor(Math.random() * 10) % 3;
  
 	     switch ((int)empcheck ) {
 		case  IS_FULL_TIME :
@@ -36,6 +40,7 @@ public class EmpwagebuilderUC5 {
 	}
 }
 	    
+
 
 
 
